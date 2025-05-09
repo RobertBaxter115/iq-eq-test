@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="Vehicle Management System Tests">
+    <description>PHP CodeSniffer configuration for Vehicle Management System Tests</description>
+
+    <!-- What to scan -->
+    <file>tests</file>
+
+    <!-- Exclude vendor directory -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Set the standard -->
+    <rule ref="PSR12">
+        <!-- Exclude method naming convention for tests -->
+        <exclude name="PSR12.Methods.MethodDeclaration"/>
+    </rule>
+
+    <!-- Custom rules -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+</ruleset> 

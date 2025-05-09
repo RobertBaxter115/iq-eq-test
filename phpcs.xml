@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ruleset name="Vehicle Management System">
+    <description>PHP CodeSniffer configuration for Vehicle Management System</description>
+
+    <!-- What to scan -->
+    <file>app</file>
+    <file>tests</file>
+
+    <!-- Exclude vendor directory -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Set the standard -->
+    <rule ref="PSR12">
+        <!-- Exclude some PSR12 rules that might be too strict -->
+        <exclude name="PSR12.Classes.OpeningBraceSpace"/>
+        <exclude name="PSR12.Functions.ReturnTypeDeclaration"/>
+        <exclude name="PSR12.Methods.MethodDeclaration.Underscore"/>
+    </rule>
+
+    <!-- Custom rules -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+        <exclude-pattern>*/vendor/*</exclude-pattern>
+        <exclude-pattern>*/database/migrations/*</exclude-pattern>
+    </rule>
+
+    <!-- Ignore specific files -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/database/migrations/*</exclude-pattern>
+</ruleset> 
